@@ -335,13 +335,10 @@ def train_D(args, emission_recon, voice, target_cl, labels, models, criterions, 
     ###############################
     
     if trainValid:
-        if args.pretrain and args.prefreeze:
-            for total_ct, _ in enumerate(model_d.children()):
-                ct=0
-            for ct, child in enumerate(model_d.children()):
-                if ct > total_ct-1: # unfreeze classifier 
-                    for param in child.parameters():
-                        param.requires_grad = True  # unfreeze D    
+        for p in model_d.parameters():
+            p.requires_grad_(True)  # unfreeze D
+        for p in model_STT.parameters():
+            p.requires_grad_(False)  # freeze model_STT
         else:
             for p in model_d.parameters():
                 p.requires_grad_(True)  # unfreeze D   
