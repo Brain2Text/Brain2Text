@@ -24,10 +24,7 @@ python tuning_txt_SI.py --dataLoc './sampledata/' --logDir './logs/' --gpuNum 0 
 ## Evaluation
 To evaluate the trained model for EEG under the subject-independent condition, run:
 ```eval
-python eval_txt_SI.py --dataLoc './sampledata/' --logDir './logs/' --gpuNum 0 1 --batch_size 52 
+python eval_txt_SI.py --dataLoc './sampledata/' --logDir './logs/' --gpuNum 0 1 --batch_size 52 --fewshot 5 --subNum 0 --evalmodel '/tunemodel'
 ```
-To evaluate the trained model for Imagined EEG on an example data, run:
-```eval
-python eval.py pretrained_model/ImaginedEEG/ pretrained_model/UNIVERSAL_V1/g_02500000 --task ImaginedEEG_vec --batch_size 5 --fewshot 5 --subNum 0 --evalmodel '/tunemodel'
-```
+
 
