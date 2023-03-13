@@ -1,5 +1,6 @@
+## Hyperparameters
+
 <table>
-  <caption>Hyperparameter of NeuroTalk models in details</caption>
   <thead>
     <tr>
       <th colspan="2">Type of hyperparameter</th>
