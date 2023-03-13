@@ -1,4 +1,4 @@
-## Hyperparameters
+# Hyperparameters
 
 <table>
   <thead>
