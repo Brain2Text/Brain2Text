@@ -1,8 +1,7 @@
 <table>
   <thead>
     <tr>
-      <th>Type of hyperparameter</th>
-      <th></th>
+      <th colspan="2">Type of hyperparameter</th>
       <th>Hyperparameter</th>
     </tr>
   </thead>
