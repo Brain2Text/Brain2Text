@@ -24,7 +24,7 @@
     </tr>
     <tr>
       <td>Conv1D kernel size</td>
-      <td>3 / 3 / 9</td>
+      <td>3 / 3 / 3</td>
     </tr>
     <tr>
       <td>Dilation</td>
@@ -32,7 +32,7 @@
     </tr>
     <tr>
       <td>Padding</td>
-      <td>1 / 0 / 4</td>
+      <td>1 / 0 / 1</td>
     </tr>
     <tr>
       <td rowspan="3">Generator-GRU</td>
@@ -58,11 +58,11 @@
     </tr>
     <tr>
       <td>Upsample rate</td>
-      <td>3 / 2 / 2</td>
+      <td>2 / 1 / 1</td>
     </tr>
     <tr>
       <td>Upsample kernel size</td>
-      <td>6 / 4 / 4</td>
+      <td>4 / 4 / 3</td>
     </tr>
     <tr>
       <td>Padding</td>
@@ -117,11 +117,11 @@
     </tr>
     <tr>
       <td>Upsample rate</td>
-      <td>3 / 3 / 3</td>
+      <td>1 / 1 / 2</td>
     </tr>
     <tr>
       <td>Upsample kernel size</td>
-      <td>6 / 6 / 6</td>
+      <td>1 / 1 / 4</td>
     </tr>
     <tr>
       <td>Padding</td>
