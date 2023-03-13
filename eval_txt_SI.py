@@ -13,7 +13,7 @@ from torchmetrics import CharErrorRate
 import json
 import argparse
 import random
-from train_txt_fewshot import train as eval
+from train_txt_SI import train as eval
 
 def save_test_all(args, test_loader, models, save_idx=None):
     
