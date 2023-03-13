@@ -1,16 +1,33 @@
-### Hi there 👋
+# Brain2Word: Text Generation from Brain Signals Based on Subject-Independent Brain-Computer Interface
+This repository is the official implementation of Brain2Word: Text Generation from Brain Signals Based on Subject-Independent Brain-Computer Interface
 
-<!--
-**Brain2Text/Brain2Text** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## Requirements
+All algorithm are developed in Python 3.8.
 
-Here are some ideas to get you started:
+To install requirements:
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+```setup
+pip install -r requirements.txt
+```
+
+## Training
+To train the model for EEG under the subject-independent condition, run this command:
+```train
+python train_txt_SI.py --dataLoc './sampledata/' --logDir './logs/' --gpuNum 0 1 --batch_size 130
+```
+To fine-tune the model for EEG, run this command:
+```train
+python tuning_txt_SI.py --dataLoc './sampledata/' --logDir './logs/' --gpuNum 0 1 --batch_size 130 --pretrain_model './pretrain' --fewshot 5 --subNum 0
+```
+>📋 the arguments of models
+
+## Evaluation
+To evaluate the trained model for EEG under the subject-independent condition, run:
+```eval
+python eval_txt_SI.py --dataLoc './sampledata/' --logDir './logs/' --gpuNum 0 1 --batch_size 52 
+```
+To evaluate the trained model for Imagined EEG on an example data, run:
+```eval
+python eval.py pretrained_model/ImaginedEEG/ pretrained_model/UNIVERSAL_V1/g_02500000 --task ImaginedEEG_vec --batch_size 5 --fewshot 5 --subNum 0 --evalmodel '/tunemodel'
+```
+
