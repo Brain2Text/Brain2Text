@@ -3,9 +3,9 @@
 |Embedding vector from EEG| Features           | 104                     |
 |                       | Time points        | 16                      |
 |Generator-pre/mid/postNet| Out channel        | 512 / 1024 / 80         |
-|^                      | Conv1D kernel size | 3 / 3 / 9               |
-|^                      | Dilation           | 1 / 1 / 1                |
-|^                      | Padding            | 1 / 0 / 4               |
+| ^^                      | Conv1D kernel size | 3 / 3 / 9               |
+| ^                      | Dilation           | 1 / 1 / 1                |
+| ^                      | Padding            | 1 / 0 / 4               |
 | Generator-GRU         | Out channel        | 256                     |
 |                       | Layers             | 1                       |
 |                       | direction          | Bi-directional          |
