@@ -19,7 +19,7 @@ To fine-tune the model for EEG, run this command:
 ```train
 python tuning_txt_SI.py --dataLoc './sampledata/' --logDir './logs/' --gpuNum 0 1 --batch_size 130 --pretrain_model './pretrain' --fewshot 5 --subNum 0
 ```
->📋 the arguments of models
+>📋 [the arguments of models](https://github.com/Brain2Word/Brain2Word/blob/main/models/readme.md)
 
 ## Evaluation
 To evaluate the trained model for EEG under the subject-independent condition, run:
