@@ -1,4 +1,4 @@
-| Type of hyperparameter |                    | Hyperparameter           |
+| Type of hyperparameter                     | Hyperparameter           |
 |-----------------------|--------------------|-------------------------|
 |                       | Features           | 104                     |
 |                       | Time points        | 16                      |
