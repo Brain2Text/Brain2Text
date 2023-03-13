@@ -1,4 +1,4 @@
-| Type of hyperparameter|                     | Hyperparameter           |
+| Type of hyperparameter(|)                     | Hyperparameter           |
 |-----------------------|--------------------|-------------------------|
 |Embedding vector from EEG| Features           | 104                     |
 |                       | Time points        | 16                      |
