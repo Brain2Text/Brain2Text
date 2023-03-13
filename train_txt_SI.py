@@ -48,7 +48,7 @@ def train(args, train_loader, models, criterions, optimizers, epoch, trainValid=
     
     total_batches = len(train_loader)
     
-    for i, (input, target_cl, voice, data_info) in enumerate(train_loader):    
+    for i, (input, target_cl, voice) in enumerate(train_loader):
 
         print("\rBatch [%5d / %5d]"%(i,total_batches), sep=' ', end='', flush=True)
         
@@ -491,24 +491,6 @@ def main(args):
     start_epoch = 0
     start_best = 1000
     
-    if args.pretrain:
-        loc_g = os.path.join(args.trained_model, 'checkpoint_g.pt')
-        loc_d = os.path.join(args.trained_model, 'checkpoint_d.pt')
-
-        if os.path.isfile(loc_g):
-            print("=> loading checkpoint '{}'".format(loc_g))
-            checkpoint_g = torch.load(loc_g, map_location='cpu')
-            model_g.load_state_dict(checkpoint_g['state_dict'])
-        else:
-            print("=> no checkpoint found at '{}'".format(loc_g))
-
-        if os.path.isfile(loc_d):
-            print("=> loading checkpoint '{}'".format(loc_d))
-            checkpoint_d = torch.load(loc_d, map_location='cpu')
-            model_d.load_state_dict(checkpoint_d['state_dict'])
-        else:
-            print("=> no checkpoint found at '{}'".format(loc_d))
-
     if args.resume:
         loc_g = os.path.join(args.savemodel, 'checkpoint_g.pt')
         loc_d = os.path.join(args.savemodel, 'checkpoint_d.pt')
