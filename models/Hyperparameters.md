@@ -94,13 +94,6 @@
       <td>64</td>
     </tr>
     <tr>
-      <td
-    <tr>
-      <td rowspan="4">Discriminator-preNet</td>
-      <td>Out channel</td>
-      <td>64</td>
-    </tr>
-    <tr>
       <td>Conv1D kernel size</td>
       <td>3</td>
     </tr>
