@@ -20,7 +20,7 @@
     <tr>
       <td rowspan="4">Generator-pre/mid/postNet</td>
       <td>Out channel</td>
-      <td>512 / 1024 / 80</td>
+      <td>512 / 1024 / 99</td>
     </tr>
     <tr>
       <td>Conv1D kernel size</td>
@@ -88,6 +88,15 @@
     <tr>
       <td>Padding</td>
       <td>1,3,5 / 3,9,15 / 5,15,25</td>
+    </tr>
+    <tr>
+      <td rowspan="2">Character embedding</td>
+      <td>Features</td>
+      <td>29</td>
+    </tr>
+    <tr>
+      <td>Embedding length</td>
+      <td>99</td>
     </tr>
     <tr>
       <td rowspan="4">Discriminator-preNet</td>
